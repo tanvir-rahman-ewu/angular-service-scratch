@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { LogService } from './service/log.service';
 import { LOG_SERVICE } from './app.module';
+import { MathHelperService } from './service/math-helper.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { LOG_SERVICE } from './app.module';
 export class AppComponent {
   title = 'service-scratch';
 
-  constructor(@Inject(LOG_SERVICE) private logService: LogService) {
+  constructor(@Inject(LOG_SERVICE) private logService: LogService, private mathHelperService: MathHelperService) {
 
   }
 }
